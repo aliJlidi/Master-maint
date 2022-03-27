@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Master Maint", "Master Maint\Master Maint.csproj", "{88D454EC-9892-4122-89D5-8C3495B023C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MM Library", "GMAOLibrary\MM Library.csproj", "{F81A31A5-6543-4054-9796-3720110039E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88D454EC-9892-4122-89D5-8C3495B023C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88D454EC-9892-4122-89D5-8C3495B023C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88D454EC-9892-4122-89D5-8C3495B023C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88D454EC-9892-4122-89D5-8C3495B023C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F81A31A5-6543-4054-9796-3720110039E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F81A31A5-6543-4054-9796-3720110039E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F81A31A5-6543-4054-9796-3720110039E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F81A31A5-6543-4054-9796-3720110039E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

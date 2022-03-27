@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88D454EC-9892-4122-89D5-8C3495B023C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Master_Maint</RootNamespace>
+    <AssemblyName>Master Maint</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="costumizedFormForAdding\ConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="costumizedFormForAdding\ConfirmationForm.Designer.cs">
+      <DependentUpon>ConfirmationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="costumizedFormForAdding\costumizedFormAddDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="costumizedFormForAdding\costumizedFormAddDel.Designer.cs">
+      <DependentUpon>costumizedFormAddDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipement\Departement\departementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipement\Departement\departementForm.Designer.cs">
+      <DependentUpon>departementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipement\Departement\editDepartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Equipement\Departement\editDepartControl.Designer.cs">
+      <DependentUpon>editDepartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipement\EquipementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipement\EquipementForm.Designer.cs">
+      <DependentUpon>EquipementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipement\manageEquip\editEquipControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Equipement\manageEquip\editEquipControl.Designer.cs">
+      <DependentUpon>editEquipControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipement\manageEquip\EquipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipement\manageEquip\EquipForm.Designer.cs">
+      <DependentUpon>EquipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipement\treeOfEquip\equipTreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipement\treeOfEquip\equipTreeForm.Designer.cs">
+      <DependentUpon>equipTreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\History\HistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interventions\History\HistoryForm.Designer.cs">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CostumizedMessages\CustomizedErrorMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CostumizedMessages\CustomizedErrorMessage.Designer.cs">
+      <DependentUpon>CustomizedErrorMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\Domains.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage\Domains.Designer.cs">
+      <DependentUpon>Domains.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\Intervenant\EditIntervenant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interventions\Intervenant\EditIntervenant.Designer.cs">
+      <DependentUpon>EditIntervenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage\HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\HelpControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\HelpControl.Designer.cs">
+      <DependentUpon>HelpControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\HomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\HomeControl.Designer.cs">
+      <DependentUpon>HomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\Intervenant\IntervenantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interventions\Intervenant\IntervenantForm.Designer.cs">
+      <DependentUpon>IntervenantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\InterventionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interventions\InterventionsForm.Designer.cs">
+      <DependentUpon>InterventionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\LoadingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage\LoadingPage.Designer.cs">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\Planning\editPlanningControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interventions\Planning\editPlanningControl.Designer.cs">
+      <DependentUpon>editPlanningControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\Planning\PlanningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interventions\Planning\PlanningForm.Designer.cs">
+      <DependentUpon>PlanningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\SubContructor\editSubContraControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interventions\SubContructor\editSubContraControl.Designer.cs">
+      <DependentUpon>editSubContraControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\SubContructor\subContructorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interventions\SubContructor\subContructorForm.Designer.cs">
+      <DependentUpon>subContructorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\WorkDemand\EditWorkDemandControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interventions\WorkDemand\EditWorkDemandControl.Designer.cs">
+      <DependentUpon>EditWorkDemandControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\WorkOrder\editWorkOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interventions\WorkOrder\editWorkOrderControl.Designer.cs">
+      <DependentUpon>editWorkOrderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\WorkOrder\workOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interventions\WorkOrder\workOrderForm.Designer.cs">
+      <DependentUpon>workOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\WorkReports\editRepportsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interventions\WorkReports\editRepportsControl.Designer.cs">
+      <DependentUpon>editRepportsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\WorkReports\workReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interventions\WorkReports\workReportsForm.Designer.cs">
+      <DependentUpon>workReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\inventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\inventoryForm.Designer.cs">
+      <DependentUpon>inventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Items\editItemsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\Items\editItemsControl.Designer.cs">
+      <DependentUpon>editItemsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Items\itemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Items\itemsForm.Designer.cs">
+      <DependentUpon>itemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Movement\editMovementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\Movement\editMovementControl.Designer.cs">
+      <DependentUpon>editMovementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Movement\movementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Movement\movementForm.Designer.cs">
+      <DependentUpon>movementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Reshippement\editShipementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\Reshippement\editShipementControl.Designer.cs">
+      <DependentUpon>editShipementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Reshippement\reshipementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Reshippement\reshipementForm.Designer.cs">
+      <DependentUpon>reshipementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Shops\editShopsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\Shops\editShopsControl.Designer.cs">
+      <DependentUpon>editShopsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Shops\shopsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Shops\shopsForm.Designer.cs">
+      <DependentUpon>shopsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Suppliers\editSupplierControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\Suppliers\editSupplierControl.Designer.cs">
+      <DependentUpon>editSupplierControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Suppliers\suppliersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Suppliers\suppliersForm.Designer.cs">
+      <DependentUpon>suppliersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HomePage\SettingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\SettingControl.Designer.cs">
+      <DependentUpon>SettingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\StatisticControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\StatisticControl.Designer.cs">
+      <DependentUpon>StatisticControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\Intervenant\ViewIntervenantList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interventions\Intervenant\ViewIntervenantList.Designer.cs">
+      <DependentUpon>ViewIntervenantList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interventions\WorkDemand\workDemandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interventions\WorkDemand\workDemandForm.Designer.cs">
+      <DependentUpon>workDemandForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="costumizedFormForAdding\ConfirmationForm.resx">
+      <DependentUpon>ConfirmationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="costumizedFormForAdding\costumizedFormAddDel.resx">
+      <DependentUpon>costumizedFormAddDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipement\Departement\departementForm.resx">
+      <DependentUpon>departementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipement\Departement\editDepartControl.resx">
+      <DependentUpon>editDepartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipement\EquipementForm.resx">
+      <DependentUpon>EquipementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipement\manageEquip\editEquipControl.resx">
+      <DependentUpon>editEquipControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipement\manageEquip\EquipForm.resx">
+      <DependentUpon>EquipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipement\treeOfEquip\equipTreeForm.resx">
+      <DependentUpon>equipTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\History\HistoryForm.resx">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CostumizedMessages\CustomizedErrorMessage.resx">
+      <DependentUpon>CustomizedErrorMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\Domains.resx">
+      <DependentUpon>Domains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\Intervenant\EditIntervenant.resx">
+      <DependentUpon>EditIntervenant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\HelpControl.resx">
+      <DependentUpon>HelpControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\HomeControl.resx">
+      <DependentUpon>HomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\Intervenant\IntervenantForm.resx">
+      <DependentUpon>IntervenantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\InterventionsForm.resx">
+      <DependentUpon>InterventionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\LoadingPage.resx">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\Planning\editPlanningControl.resx">
+      <DependentUpon>editPlanningControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\Planning\PlanningForm.resx">
+      <DependentUpon>PlanningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\SubContructor\editSubContraControl.resx">
+      <DependentUpon>editSubContraControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\SubContructor\subContructorForm.resx">
+      <DependentUpon>subContructorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\WorkDemand\EditWorkDemandControl.resx">
+      <DependentUpon>EditWorkDemandControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\WorkOrder\editWorkOrderControl.resx">
+      <DependentUpon>editWorkOrderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\WorkOrder\workOrderForm.resx">
+      <DependentUpon>workOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\WorkReports\editRepportsControl.resx">
+      <DependentUpon>editRepportsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\WorkReports\workReportsForm.resx">
+      <DependentUpon>workReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\inventoryForm.resx">
+      <DependentUpon>inventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Items\editItemsControl.resx">
+      <DependentUpon>editItemsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Items\itemsForm.resx">
+      <DependentUpon>itemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Movement\editMovementControl.resx">
+      <DependentUpon>editMovementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Movement\movementForm.resx">
+      <DependentUpon>movementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Reshippement\editShipementControl.resx">
+      <DependentUpon>editShipementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Reshippement\reshipementForm.resx">
+      <DependentUpon>reshipementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Shops\editShopsControl.resx">
+      <DependentUpon>editShopsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Shops\shopsForm.resx">
+      <DependentUpon>shopsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Suppliers\editSupplierControl.resx">
+      <DependentUpon>editSupplierControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Suppliers\suppliersForm.resx">
+      <DependentUpon>suppliersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="HomePage\SettingControl.resx">
+      <DependentUpon>SettingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\StatisticControl.resx">
+      <DependentUpon>StatisticControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\Intervenant\ViewIntervenantList.resx">
+      <DependentUpon>ViewIntervenantList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interventions\WorkDemand\workDemandForm.resx">
+      <DependentUpon>workDemandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GMAOLibrary\MM Library.csproj">
+      <Project>{f81a31a5-6543-4054-9796-3720110039e9}</Project>
+      <Name>MM Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
